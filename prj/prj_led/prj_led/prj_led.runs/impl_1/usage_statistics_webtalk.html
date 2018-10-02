@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>我的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Device Usage Statistics Report Device Usage Page (usage_statistics_webtalk.html)This HTML page displays the device usage statistics that will be sent to Xilinx.To see the actual file transmitted to Xi">
+<meta property="og:type" content="website">
+<meta property="og:title" content="我的博客">
+<meta property="og:url" content="http://iotsj.cn/prj/prj_led/prj_led/prj_led.runs/impl_1/usage_statistics_webtalk.html">
+<meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="Device Usage Statistics Report Device Usage Page (usage_statistics_webtalk.html)This HTML page displays the device usage statistics that will be sent to Xilinx.To see the actual file transmitted to Xi">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-02T10:37:30.133Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的博客">
+<meta name="twitter:description" content="Device Usage Statistics Report Device Usage Page (usage_statistics_webtalk.html)This HTML page displays the device usage statistics that will be sent to Xilinx.To see the actual file transmitted to Xi">
+  
+    <link rel="alternative" href="/atom.xml" title="我的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="../../../../../css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Mob</a></h1>
+        </hgroup>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="../../../../../archives/">所有文章</a></li>
+                        
+                            <li><a  href="../../../../../categories/tool">玩转开发工具</a></li>
+                        
+                            <li><a  href="../../../../../categories/digital">玩转数码</a></li>
+                        
+                            <li><a  href="../../../../../categories/algorithm">算法学习</a></li>
+                        
+                            <li><a  href="../../../../../about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="../../../../../xxxxx" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="../../../../../xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="../../../../../atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="../../../../../tags/C/" style="font-size: 10px;">C++</a> <a href="../../../../../tags/main/" style="font-size: 10px;">main</a> <a href="../../../../../tags/opencv/" style="font-size: 10px;">opencv</a> <a href="../../../../../tags/python/" style="font-size: 10px;">python</a> <a href="../../../../../tags/zynq/" style="font-size: 10px;">zynq</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Mob</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Mob</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="../../../../../archives/">所有文章</a></li>
+                
+                    <li><a href="../../../../../categories/tool">玩转开发工具</a></li>
+                
+                    <li><a href="../../../../../categories/digital">玩转数码</a></li>
+                
+                    <li><a href="../../../../../categories/algorithm">算法学习</a></li>
+                
+                    <li><a href="../../../../../about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="../../../../../xxxxx" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="../../../../../xxxxxxxx" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="../../../../../atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="" class="article-date">
+      <time datetime="2018-10-02T10:37:30.133Z" itemprop="datePublished">2018-10-02</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <style>
+    .article-meta {
+        display: none;
+    }
+    #container .article .article-title {
+        padding-right: 0;
+    }
+    .article-header {
+        padding: 0;
+        padding-top: 26px;
+        border-left: none;
+        text-align: center;
+    }
+    .article-header:hover {
+        border-left: none;
+    }
+    .article-title {
+        font-size: 1.6em
+    }
+    .article-meta {
+        display: none;
+    }
+    .article-entry hr {
+        margin: 0;
+    }
+    #container .article-info-post.article-info {
+      display: none;
+      }
+    #container .article .article-title {
+    padding: 0;
+    }
+</style>
+
+
+          
+        <html><head><title>Device Usage Statistics Report</title></head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000"><h3>Device Usage Page (usage_statistics_webtalk.html)</h3>This HTML page displays the device usage statistics that will be sent to Xilinx.<br>To see the actual file transmitted to Xilinx, please click <a href="./usage_statistics_webtalk.xml">here</a>.<br><br><hr>
+ <table border="1" cellspacing="0" width="100%">
+  <tr align="CENTER" bgcolor="#A7BFDE"><td colspan="4"><b>software_version_and_target_device</b></td></tr>
+<tr align="LEFT">  <td bgcolor="#DBE5F1"><b>beta</b></td><td>FALSE</td>
+  <td bgcolor="#DBE5F1"><b>build_version</b></td><td>1733598</td>
+</tr><tr align="LEFT">  <td bgcolor="#DBE5F1"><b>date_generated</b></td><td>Tue Oct 02 18:37:30 2018</td>
+  <td bgcolor="#DBE5F1"><b>os_platform</b></td><td>WIN64</td>
+</tr><tr align="LEFT">  <td bgcolor="#DBE5F1"><b>product_version</b></td><td>Vivado v2016.4 (64-bit)</td>
+  <td bgcolor="#DBE5F1"><b>project_id</b></td><td>212737f8804e4acabd40e92a16deaa59</td>
+</tr><tr align="LEFT">  <td bgcolor="#DBE5F1"><b>project_iteration</b></td><td>1</td>
+  <td bgcolor="#DBE5F1"><b>random_id</b></td><td>9bba8e7b-1fb2-4334-b08a-cf830555dedf</td>
+</tr><tr align="LEFT">  <td bgcolor="#DBE5F1"><b>registration_id</b></td><td>9bba8e7b-1fb2-4334-b08a-cf830555dedf</td>
+  <td bgcolor="#DBE5F1"><b>route_design</b></td><td>TRUE</td>
+</tr><tr align="LEFT">  <td bgcolor="#DBE5F1"><b>target_device</b></td><td>xc7z020</td>
+  <td bgcolor="#DBE5F1"><b>target_family</b></td><td>zynq</td>
+</tr><tr align="LEFT">  <td bgcolor="#DBE5F1"><b>target_package</b></td><td>clg400</td>
+  <td bgcolor="#DBE5F1"><b>target_speed</b></td><td>-2</td>
+</tr><tr align="LEFT">  <td bgcolor="#DBE5F1"><b>tool_flow</b></td><td>Vivado</td>
+</tr> </table><br>
+ <table border="1" cellspacing="0" width="100%">
+  <tr align="CENTER" bgcolor="#A7BFDE"><td colspan="4"><b>user_environment</b></td></tr>
+<tr align="LEFT">  <td bgcolor="#DBE5F1"><b>cpu_name</b></td><td>Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz</td>
+  <td bgcolor="#DBE5F1"><b>cpu_speed</b></td><td>2594 MHz</td>
+</tr><tr align="LEFT">  <td bgcolor="#DBE5F1"><b>os_name</b></td><td>Microsoft Windows 8 or later , 64-bit</td>
+  <td bgcolor="#DBE5F1"><b>os_release</b></td><td>major release  (build 9200)</td>
+</tr><tr align="LEFT">  <td bgcolor="#DBE5F1"><b>system_ram</b></td><td>8.000 GB</td>
+  <td bgcolor="#DBE5F1"><b>total_processors</b></td><td>1</td>
+</tr> </table><br>
+ <table border="1" cellspacing="0" width="100%">
+  <tr align="CENTER" bgcolor="#A7BFDE"><td colspan="4"><b>vivado_usage</b></td></tr>
+<tr align="LEFT">  <table border="1" cellspacing="0" width="100%">
+   <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>java_command_handlers</b></td></tr>
+<tr align="LEFT">   <td>addsources=2</td>
+   <td>autoconnecttarget=1</td>
+   <td>launchprogramfpga=4</td>
+   <td>newproject=1</td>
+</tr><tr align="LEFT">   <td>openhardwaremanager=4</td>
+   <td>openrecenttarget=1</td>
+   <td>programdevice=3</td>
+   <td>runbitgen=4</td>
+</tr><tr align="LEFT">   <td>runimplementation=3</td>
+   <td>runsynthesis=7</td>
+   <td>showview=2</td>
+</tr>  </table>
+  <table border="1" cellspacing="0" width="100%">
+   <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>other_data</b></td></tr>
+<tr align="LEFT">   <td>guimode=1</td>
+</tr>  </table>
+</tr><tr align="LEFT">  <table border="1" cellspacing="0" width="100%">
+   <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>project_data</b></td></tr>
+<tr align="LEFT">   <td>constraintsetcount=1</td>
+   <td>core_container=false</td>
+   <td>currentimplrun=impl_1</td>
+   <td>currentsynthesisrun=synth_1</td>
+</tr><tr align="LEFT">   <td>default_library=xil_defaultlib</td>
+   <td>designmode=RTL</td>
+   <td>export_simulation_activehdl=0</td>
+   <td>export_simulation_ies=0</td>
+</tr><tr align="LEFT">   <td>export_simulation_modelsim=0</td>
+   <td>export_simulation_questa=0</td>
+   <td>export_simulation_riviera=0</td>
+   <td>export_simulation_vcs=0</td>
+</tr><tr align="LEFT">   <td>export_simulation_xsim=0</td>
+   <td>implstrategy=Vivado Implementation Defaults</td>
+   <td>launch_simulation_activehdl=0</td>
+   <td>launch_simulation_ies=0</td>
+</tr><tr align="LEFT">   <td>launch_simulation_modelsim=0</td>
+   <td>launch_simulation_questa=0</td>
+   <td>launch_simulation_riviera=0</td>
+   <td>launch_simulation_vcs=0</td>
+</tr><tr align="LEFT">   <td>launch_simulation_xsim=0</td>
+   <td>simulator_language=Mixed</td>
+   <td>srcsetcount=1</td>
+   <td>synthesisstrategy=Vivado Synthesis Defaults</td>
+</tr><tr align="LEFT">   <td>target_language=Verilog</td>
+   <td>target_simulator=XSim</td>
+   <td>totalimplruns=1</td>
+   <td>totalsynthesisruns=1</td>
+</tr>  </table>
+</tr> </table><br>
+ <table border="1" cellspacing="0" width="100%">
+  <tr align="CENTER" bgcolor="#A7BFDE"><td colspan="1"><b>unisim_transformation</b></td></tr>
+   <tr><td>
+   <table border="1" cellspacing="0" width="100%">
+    <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>post_unisim_transformation</b></td></tr>
+<tr align="LEFT">    <td>bufg=1</td>
+    <td>carry4=8</td>
+    <td>fdre=35</td>
+    <td>fdse=1</td>
+</tr><tr align="LEFT">    <td>gnd=1</td>
+    <td>ibuf=2</td>
+    <td>lut1=32</td>
+    <td>lut4=8</td>
+</tr><tr align="LEFT">    <td>lut5=33</td>
+    <td>lut6=1</td>
+    <td>obuf=4</td>
+    <td>vcc=1</td>
+</tr>   </table>
+   </td></tr>
+   <tr><td>
+   <table border="1" cellspacing="0" width="100%">
+    <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>pre_unisim_transformation</b></td></tr>
+<tr align="LEFT">    <td>bufg=1</td>
+    <td>carry4=8</td>
+    <td>fdre=35</td>
+    <td>fdse=1</td>
+</tr><tr align="LEFT">    <td>gnd=1</td>
+    <td>ibuf=2</td>
+    <td>lut1=32</td>
+    <td>lut4=8</td>
+</tr><tr align="LEFT">    <td>lut5=33</td>
+    <td>lut6=1</td>
+    <td>obuf=4</td>
+    <td>vcc=1</td>
+</tr>   </table>
+   </td></tr>
+  </table><br>
+ <table border="1" cellspacing="0" width="100%">
+  <tr align="CENTER" bgcolor="#A7BFDE"><td colspan="1"><b>report_drc</b></td></tr>
+   <tr><td>
+   <table border="1" cellspacing="0" width="100%">
+    <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>command_line_options</b></td></tr>
+<tr align="LEFT">    <td>-append=default::[not_specified]</td>
+    <td>-checks=default::[not_specified]</td>
+    <td>-fail_on=default::[not_specified]</td>
+    <td>-force=default::[not_specified]</td>
+</tr><tr align="LEFT">    <td>-format=default::[not_specified]</td>
+    <td>-messages=default::[not_specified]</td>
+    <td>-name=default::[not_specified]</td>
+    <td>-return_string=default::[not_specified]</td>
+</tr><tr align="LEFT">    <td>-ruledecks=default::[not_specified]</td>
+    <td>-upgrade_cw=default::[not_specified]</td>
+</tr>   </table>
+   </td></tr>
+   <tr><td>
+   <table border="1" cellspacing="0" width="100%">
+    <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>results</b></td></tr>
+<tr align="LEFT">    <td>zps7-1=1</td>
+</tr>   </table>
+   </td></tr>
+  </table><br>
+ <table border="1" cellspacing="0" width="100%">
+  <tr align="CENTER" bgcolor="#A7BFDE"><td colspan="1"><b>report_utilization</b></td></tr>
+   <tr><td>
+   <table border="1" cellspacing="0" width="100%">
+    <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>clocking</b></td></tr>
+<tr align="LEFT">    <td>bufgctrl_available=32</td>
+    <td>bufgctrl_fixed=0</td>
+    <td>bufgctrl_used=1</td>
+    <td>bufgctrl_util_percentage=3.13</td>
+</tr><tr align="LEFT">    <td>bufhce_available=72</td>
+    <td>bufhce_fixed=0</td>
+    <td>bufhce_used=0</td>
+    <td>bufhce_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>bufio_available=16</td>
+    <td>bufio_fixed=0</td>
+    <td>bufio_used=0</td>
+    <td>bufio_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>bufmrce_available=8</td>
+    <td>bufmrce_fixed=0</td>
+    <td>bufmrce_used=0</td>
+    <td>bufmrce_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>bufr_available=16</td>
+    <td>bufr_fixed=0</td>
+    <td>bufr_used=0</td>
+    <td>bufr_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>mmcme2_adv_available=4</td>
+    <td>mmcme2_adv_fixed=0</td>
+    <td>mmcme2_adv_used=0</td>
+    <td>mmcme2_adv_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>plle2_adv_available=4</td>
+    <td>plle2_adv_fixed=0</td>
+    <td>plle2_adv_used=0</td>
+    <td>plle2_adv_util_percentage=0.00</td>
+</tr>   </table>
+   </td></tr>
+   <tr><td>
+   <table border="1" cellspacing="0" width="100%">
+    <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>dsp</b></td></tr>
+<tr align="LEFT">    <td>dsps_available=220</td>
+    <td>dsps_fixed=0</td>
+    <td>dsps_used=0</td>
+    <td>dsps_util_percentage=0.00</td>
+</tr>   </table>
+   </td></tr>
+   <tr><td>
+   <table border="1" cellspacing="0" width="100%">
+    <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>io_standard</b></td></tr>
+<tr align="LEFT">    <td>blvds_25=0</td>
+    <td>diff_hstl_i=0</td>
+    <td>diff_hstl_i_18=0</td>
+    <td>diff_hstl_ii=0</td>
+</tr><tr align="LEFT">    <td>diff_hstl_ii_18=0</td>
+    <td>diff_hsul_12=0</td>
+    <td>diff_mobile_ddr=0</td>
+    <td>diff_sstl135=0</td>
+</tr><tr align="LEFT">    <td>diff_sstl135_r=0</td>
+    <td>diff_sstl15=0</td>
+    <td>diff_sstl15_r=0</td>
+    <td>diff_sstl18_i=0</td>
+</tr><tr align="LEFT">    <td>diff_sstl18_ii=0</td>
+    <td>hstl_i=0</td>
+    <td>hstl_i_18=0</td>
+    <td>hstl_ii=0</td>
+</tr><tr align="LEFT">    <td>hstl_ii_18=0</td>
+    <td>hsul_12=0</td>
+    <td>lvcmos12=0</td>
+    <td>lvcmos15=0</td>
+</tr><tr align="LEFT">    <td>lvcmos18=0</td>
+    <td>lvcmos25=0</td>
+    <td>lvcmos33=1</td>
+    <td>lvds_25=0</td>
+</tr><tr align="LEFT">    <td>lvttl=0</td>
+    <td>mini_lvds_25=0</td>
+    <td>mobile_ddr=0</td>
+    <td>pci33_3=0</td>
+</tr><tr align="LEFT">    <td>ppds_25=0</td>
+    <td>rsds_25=0</td>
+    <td>sstl135=0</td>
+    <td>sstl135_r=0</td>
+</tr><tr align="LEFT">    <td>sstl15=0</td>
+    <td>sstl15_r=0</td>
+    <td>sstl18_i=0</td>
+    <td>sstl18_ii=0</td>
+</tr><tr align="LEFT">    <td>tmds_33=0</td>
+</tr>   </table>
+   </td></tr>
+   <tr><td>
+   <table border="1" cellspacing="0" width="100%">
+    <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>memory</b></td></tr>
+<tr align="LEFT">    <td>block_ram_tile_available=140</td>
+    <td>block_ram_tile_fixed=0</td>
+    <td>block_ram_tile_used=0</td>
+    <td>block_ram_tile_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>ramb18_available=280</td>
+    <td>ramb18_fixed=0</td>
+    <td>ramb18_used=0</td>
+    <td>ramb18_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>ramb36_fifo_available=140</td>
+    <td>ramb36_fifo_fixed=0</td>
+    <td>ramb36_fifo_used=0</td>
+    <td>ramb36_fifo_util_percentage=0.00</td>
+</tr>   </table>
+   </td></tr>
+   <tr><td>
+   <table border="1" cellspacing="0" width="100%">
+    <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>primitives</b></td></tr>
+<tr align="LEFT">    <td>bufg_functional_category=Clock</td>
+    <td>bufg_used=1</td>
+    <td>carry4_functional_category=CarryLogic</td>
+    <td>carry4_used=8</td>
+</tr><tr align="LEFT">    <td>fdre_functional_category=Flop &amp; Latch</td>
+    <td>fdre_used=36</td>
+    <td>fdse_functional_category=Flop &amp; Latch</td>
+    <td>fdse_used=1</td>
+</tr><tr align="LEFT">    <td>ibuf_functional_category=IO</td>
+    <td>ibuf_used=2</td>
+    <td>lut1_functional_category=LUT</td>
+    <td>lut1_used=1</td>
+</tr><tr align="LEFT">    <td>lut4_functional_category=LUT</td>
+    <td>lut4_used=8</td>
+    <td>lut5_functional_category=LUT</td>
+    <td>lut5_used=33</td>
+</tr><tr align="LEFT">    <td>lut6_functional_category=LUT</td>
+    <td>lut6_used=1</td>
+    <td>obuf_functional_category=IO</td>
+    <td>obuf_used=4</td>
+</tr>   </table>
+   </td></tr>
+   <tr><td>
+   <table border="1" cellspacing="0" width="100%">
+    <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>slice_logic</b></td></tr>
+<tr align="LEFT">    <td>f7_muxes_available=26600</td>
+    <td>f7_muxes_fixed=0</td>
+    <td>f7_muxes_used=0</td>
+    <td>f7_muxes_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>f8_muxes_available=13300</td>
+    <td>f8_muxes_fixed=0</td>
+    <td>f8_muxes_used=0</td>
+    <td>f8_muxes_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>lut_as_logic_available=53200</td>
+    <td>lut_as_logic_fixed=0</td>
+    <td>lut_as_logic_used=42</td>
+    <td>lut_as_logic_util_percentage=0.08</td>
+</tr><tr align="LEFT">    <td>lut_as_memory_available=17400</td>
+    <td>lut_as_memory_fixed=0</td>
+    <td>lut_as_memory_used=0</td>
+    <td>lut_as_memory_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>register_as_flip_flop_available=106400</td>
+    <td>register_as_flip_flop_fixed=0</td>
+    <td>register_as_flip_flop_used=37</td>
+    <td>register_as_flip_flop_util_percentage=0.03</td>
+</tr><tr align="LEFT">    <td>register_as_latch_available=106400</td>
+    <td>register_as_latch_fixed=0</td>
+    <td>register_as_latch_used=0</td>
+    <td>register_as_latch_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>slice_luts_available=53200</td>
+    <td>slice_luts_fixed=0</td>
+    <td>slice_luts_used=42</td>
+    <td>slice_luts_util_percentage=0.08</td>
+</tr><tr align="LEFT">    <td>slice_registers_available=106400</td>
+    <td>slice_registers_fixed=0</td>
+    <td>slice_registers_used=37</td>
+    <td>slice_registers_util_percentage=0.03</td>
+</tr><tr align="LEFT">    <td>fully_used_lut_ff_pairs_fixed=0.03</td>
+    <td>fully_used_lut_ff_pairs_used=1</td>
+    <td>lut_as_distributed_ram_fixed=0</td>
+    <td>lut_as_distributed_ram_used=0</td>
+</tr><tr align="LEFT">    <td>lut_as_logic_available=53200</td>
+    <td>lut_as_logic_fixed=0</td>
+    <td>lut_as_logic_used=42</td>
+    <td>lut_as_logic_util_percentage=0.08</td>
+</tr><tr align="LEFT">    <td>lut_as_memory_available=17400</td>
+    <td>lut_as_memory_fixed=0</td>
+    <td>lut_as_memory_used=0</td>
+    <td>lut_as_memory_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>lut_as_shift_register_fixed=0</td>
+    <td>lut_as_shift_register_used=0</td>
+    <td>lut_ff_pairs_with_one_unused_flip_flop_fixed=0</td>
+    <td>lut_ff_pairs_with_one_unused_flip_flop_used=31</td>
+</tr><tr align="LEFT">    <td>lut_ff_pairs_with_one_unused_lut_output_fixed=31</td>
+    <td>lut_ff_pairs_with_one_unused_lut_output_used=32</td>
+    <td>lut_flip_flop_pairs_available=53200</td>
+    <td>lut_flip_flop_pairs_fixed=0</td>
+</tr><tr align="LEFT">    <td>lut_flip_flop_pairs_used=33</td>
+    <td>lut_flip_flop_pairs_util_percentage=0.06</td>
+    <td>slice_available=13300</td>
+    <td>slice_fixed=0</td>
+</tr><tr align="LEFT">    <td>slice_used=22</td>
+    <td>slice_util_percentage=0.17</td>
+    <td>slicel_fixed=0</td>
+    <td>slicel_used=18</td>
+</tr><tr align="LEFT">    <td>slicem_fixed=0</td>
+    <td>slicem_used=4</td>
+    <td>unique_control_sets_used=2</td>
+    <td>using_o5_and_o6_fixed=2</td>
+</tr><tr align="LEFT">    <td>using_o5_and_o6_used=1</td>
+    <td>using_o5_output_only_fixed=1</td>
+    <td>using_o5_output_only_used=0</td>
+    <td>using_o6_output_only_fixed=0</td>
+</tr><tr align="LEFT">    <td>using_o6_output_only_used=41</td>
+</tr>   </table>
+   </td></tr>
+   <tr><td>
+   <table border="1" cellspacing="0" width="100%">
+    <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>specific_feature</b></td></tr>
+<tr align="LEFT">    <td>bscane2_available=4</td>
+    <td>bscane2_fixed=0</td>
+    <td>bscane2_used=0</td>
+    <td>bscane2_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>capturee2_available=1</td>
+    <td>capturee2_fixed=0</td>
+    <td>capturee2_used=0</td>
+    <td>capturee2_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>dna_port_available=1</td>
+    <td>dna_port_fixed=0</td>
+    <td>dna_port_used=0</td>
+    <td>dna_port_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>efuse_usr_available=1</td>
+    <td>efuse_usr_fixed=0</td>
+    <td>efuse_usr_used=0</td>
+    <td>efuse_usr_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>frame_ecce2_available=1</td>
+    <td>frame_ecce2_fixed=0</td>
+    <td>frame_ecce2_used=0</td>
+    <td>frame_ecce2_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>icape2_available=2</td>
+    <td>icape2_fixed=0</td>
+    <td>icape2_used=0</td>
+    <td>icape2_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>startupe2_available=1</td>
+    <td>startupe2_fixed=0</td>
+    <td>startupe2_used=0</td>
+    <td>startupe2_util_percentage=0.00</td>
+</tr><tr align="LEFT">    <td>xadc_available=1</td>
+    <td>xadc_fixed=0</td>
+    <td>xadc_used=0</td>
+    <td>xadc_util_percentage=0.00</td>
+</tr>   </table>
+   </td></tr>
+  </table><br>
+ <table border="1" cellspacing="0" width="100%">
+  <tr align="CENTER" bgcolor="#A7BFDE"><td colspan="1"><b>router</b></td></tr>
+   <tr><td>
+   <table border="1" cellspacing="0" width="100%">
+    <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>usage</b></td></tr>
+<tr align="LEFT">    <td>actual_expansions=339903</td>
+    <td>bogomips=0</td>
+    <td>bram18=0</td>
+    <td>bram36=0</td>
+</tr><tr align="LEFT">    <td>bufg=0</td>
+    <td>bufr=0</td>
+    <td>congestion_level=0</td>
+    <td>ctrls=2</td>
+</tr><tr align="LEFT">    <td>dsp=0</td>
+    <td>effort=2</td>
+    <td>estimated_expansions=49674</td>
+    <td>ff=37</td>
+</tr><tr align="LEFT">    <td>global_clocks=1</td>
+    <td>high_fanout_nets=0</td>
+    <td>iob=6</td>
+    <td>lut=42</td>
+</tr><tr align="LEFT">    <td>movable_instances=97</td>
+    <td>nets=129</td>
+    <td>pins=592</td>
+    <td>pll=0</td>
+</tr><tr align="LEFT">    <td>router_runtime=0.000000</td>
+    <td>router_timing_driven=1</td>
+    <td>threads=2</td>
+    <td>timing_constraints_exist=1</td>
+</tr>   </table>
+   </td></tr>
+  </table><br>
+ <table border="1" cellspacing="0" width="100%">
+  <tr align="CENTER" bgcolor="#A7BFDE"><td colspan="1"><b>synthesis</b></td></tr>
+   <tr><td>
+   <table border="1" cellspacing="0" width="100%">
+    <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>command_line_options</b></td></tr>
+<tr align="LEFT">    <td>-assert=default::[not_specified]</td>
+    <td>-bufg=default::12</td>
+    <td>-cascade_dsp=default::auto</td>
+    <td>-constrset=default::[not_specified]</td>
+</tr><tr align="LEFT">    <td>-control_set_opt_threshold=default::auto</td>
+    <td>-directive=default::default</td>
+    <td>-fanout_limit=default::10000</td>
+    <td>-flatten_hierarchy=default::rebuilt</td>
+</tr><tr align="LEFT">    <td>-fsm_extraction=default::auto</td>
+    <td>-gated_clock_conversion=default::off</td>
+    <td>-generic=default::[not_specified]</td>
+    <td>-include_dirs=default::[not_specified]</td>
+</tr><tr align="LEFT">    <td>-keep_equivalent_registers=default::[not_specified]</td>
+    <td>-max_bram=default::-1</td>
+    <td>-max_bram_cascade_height=default::-1</td>
+    <td>-max_dsp=default::-1</td>
+</tr><tr align="LEFT">    <td>-max_uram=default::-1</td>
+    <td>-max_uram_cascade_height=default::-1</td>
+    <td>-mode=default::default</td>
+    <td>-name=default::[not_specified]</td>
+</tr><tr align="LEFT">    <td>-no_lc=default::[not_specified]</td>
+    <td>-no_srlextract=default::[not_specified]</td>
+    <td>-no_timing_driven=default::[not_specified]</td>
+    <td>-part=xc7z020clg400-2</td>
+</tr><tr align="LEFT">    <td>-resource_sharing=default::auto</td>
+    <td>-retiming=default::[not_specified]</td>
+    <td>-rtl=default::[not_specified]</td>
+    <td>-rtl_skip_constraints=default::[not_specified]</td>
+</tr><tr align="LEFT">    <td>-rtl_skip_ip=default::[not_specified]</td>
+    <td>-seu_protect=default::none</td>
+    <td>-shreg_min_size=default::3</td>
+    <td>-top=led</td>
+</tr><tr align="LEFT">    <td>-verilog_define=default::[not_specified]</td>
+</tr>   </table>
+   </td></tr>
+   <tr><td>
+   <table border="1" cellspacing="0" width="100%">
+    <tr align="CENTER" bgcolor="#DBE5F1"><td colspan="4"><b>usage</b></td></tr>
+<tr align="LEFT">    <td>elapsed=00:00:31s</td>
+    <td>hls_ip=0</td>
+    <td>memory_gain=438.266MB</td>
+    <td>memory_peak=678.523MB</td>
+</tr>   </table>
+   </td></tr>
+  </table><br>
+</body>
+</html>
+
+      
+    </div>
+    
+  </div>
+  
+    
+
+
+
+  
+</article>
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'xxxx',
+      conf: 'xxxxxxxxx'
+    });
+  </script>
+</section>
+    
+
+
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2018 Mob
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="../../../../../js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-" + backgroundnum +".jpg)";
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
